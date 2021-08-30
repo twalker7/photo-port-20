@@ -9,6 +9,11 @@ function Nav(props) {
     currentCategory,
   } = props;
 
+  const handleClick = (item) => {
+    console.log(item);
+    return item;
+  };
+
 //useEffect added from 20.3.4 to affect the DOM
 useEffect(() => {
     document.title = capitalizeFirstLetter(currentCategory.name);
@@ -28,8 +33,10 @@ useEffect(() => {
               About me
             </a>
           </li>
-          <li className="mx-2">
-            <span>Contact</span>
+          <li className={"mx-2"}>
+            <span onClick={() => handleClick('Contact')}>
+              Contact
+            </span>
           </li>
           {categories.map((category) => (
             <li
