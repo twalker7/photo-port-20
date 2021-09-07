@@ -19,6 +19,7 @@ function App() {
   return (
     <div>
       <Nav
+      //custom jsx attributes assigned values from the state getter object 
         categories={categories}
         setCurrentCategory={setCurrentCategory}
         currentCategory={currentCategory}
@@ -26,7 +27,7 @@ function App() {
       <main>
         <div>
           <Gallery currentCategory={currentCategory}></Gallery>
-          <About></About>
+          <About></About> 
         </div>
       </main>
     </div>
